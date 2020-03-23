@@ -16,7 +16,24 @@ namespace OfficeInventoryApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            // check login
+            /*
+            FormLogin login_form = new FormLogin();
+            DialogResult login_result = login_form.ShowDialog();
+            // if login successful
+            if (login_result == DialogResult.OK)
+            {
+                Form1 main_form = new Form1();
+                Application.Run(main_form);
+            }
+            */
+            FormLogin login_form = new FormLogin();
+            DialogResult login_result = login_form.ShowDialog();
+            if (login_result == DialogResult.OK)
+            {
+                Form1 main_form = new Form1();
+                Application.Run(main_form);
+            }
         }
     }
 }
