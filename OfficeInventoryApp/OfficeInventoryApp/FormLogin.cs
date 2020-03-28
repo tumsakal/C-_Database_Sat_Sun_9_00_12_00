@@ -31,8 +31,31 @@ namespace OfficeInventoryApp
                 SqlConnection conn = new SqlConnection();
                 conn.ConnectionString = connection_String;
                 conn.Open();
+                //Create Command
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText="SELECT modified_date, staff_id FROM [User] WHERE staff_username='""'+ staff_password='""'"+";
+                cmd.CommandText = $"SELECT modified_date, staff_id FROM [User] WHERE staff_username='{txtUsername.Text.Trim()}'+ staff_password='{txtPassword.Text.Trim()}'";
+                //Run Command
+
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows == true)
+                {
+                    if (reader.Read() == true)
+                    {
+                        int id_index = 1;
+                        string staff_identity = reader.GetInt32(id_index).ToString();
+                        int date_index = 0;
+                        DateTime modified_date = reader.GetDateTime(date_index);
+                        MessageBox.Show("Staff ID " + staff_identity + "\n Register at " + modified_date.ToShortDateString());
+                        this.DialogResult = DialogResult.OK;
+                    }
+                conn.Close();
+                }
+                else
+                {
+                    conn.Close();
+                    this.DialogResult = DialogResult.No;
+                }
             }catch(Exception ex)
             {
                 MessageBox.Show("Connection Fail" + ex);
