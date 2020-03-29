@@ -32,7 +32,7 @@ namespace OfficeInventoryApp
             conn.Open();
             // command
             /*string sql_command_txt = " SELECT * FROM [USER] WHERE staff_username ='" + txtUsername.Text.Trim() + "' AND staff_password = '" + txtPassword.Text.Trim() + "'";*/
-            string sql_command_txt = $" SELECT staff_id FROM [USER] WHERE staff_username ='{txtUsername.Text.Trim()}' ANd staff_password ='{txtPassword.Text.Trim()}'";
+            string sql_command_txt = $" SELECT staff_id FROM [USER] WHERE staff_username ='{ txtUsername.Text.Trim() }' ANd staff_password ='{ txtPassword.Text.Trim() }'";
             SqlCommand cmd = new SqlCommand(sql_command_txt, conn);
             // reader
             SqlDataReader reader = cmd.ExecuteReader();
@@ -51,6 +51,7 @@ namespace OfficeInventoryApp
             }
             else
             {
+                MessageBox.Show(" no data ");
                 this.DialogResult = DialogResult.No;
                 conn.Close();
             }

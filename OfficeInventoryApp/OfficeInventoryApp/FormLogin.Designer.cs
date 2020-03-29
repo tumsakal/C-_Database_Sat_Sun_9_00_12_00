@@ -48,7 +48,7 @@
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(93, 31);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(170, 20);
             this.txtUsername.TabIndex = 1;
@@ -56,7 +56,7 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(93, 62);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(170, 20);
             this.txtPassword.TabIndex = 3;
@@ -74,8 +74,8 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(184, 94);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Location = new System.Drawing.Point(186, 104);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(77, 23);
             this.btnLogin.TabIndex = 4;
@@ -93,7 +93,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";
